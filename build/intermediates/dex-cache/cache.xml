@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\classes-cab7385fa23df14350cd36d768a16f9b24468a29.jar" />
+    </item>
+    <item
+        jar="C:\Users\Trethtzer\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-a93b4043e9f7c09d6627eb4427c168cbd6b4bd71.jar" />
+    </item>
+    <item
+        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-3fc650b56a803005dc90c5f2ef205d5ed476878c.jar" />
+    </item>
+    <item
+        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\classes-5f0846810535d91fc495fe0d8dc7013a210b0d96.jar" />
+    </item>
+
+</items>

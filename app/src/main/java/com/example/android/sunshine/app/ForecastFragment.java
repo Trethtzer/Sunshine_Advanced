@@ -32,6 +32,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.android.sunshine.app.data.WeatherContract;
 import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
@@ -46,6 +47,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     private ListView mListView;
     private int mPosition = ListView.INVALID_POSITION;
     private boolean mUseTodayLayout;
+    private TextView emptyList;
 
     private static final String SELECTED_KEY = "selected_position";
 
@@ -158,6 +160,9 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
                 mPosition = position;
             }
         });
+        emptyList = (TextView) rootView.findViewById(R.id.empty_list_text);
+        emptyList.setText(R.string.empty_list);
+        mListView.setEmptyView(emptyList);
 
         // If there's instance state, mine it for useful information.
         // The end-goal here is that the user never knows that turning their device sideways
@@ -248,6 +253,12 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         mForecastAdapter.swapCursor(data);
+        if(!data.moveToFirst()){
+            // Comprobar si tenemos conexión a internet.
+            if(!Utility.checkInternet(getActivity())){
+                emptyList.setText(R.string.internet_not_available);
+            }
+        }
         if (mPosition != ListView.INVALID_POSITION) {
             // If we don't need to restart the loader, and there's a desired position to restore
             // to, do so now.

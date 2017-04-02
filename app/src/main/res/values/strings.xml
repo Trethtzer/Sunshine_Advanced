@@ -109,4 +109,8 @@
     <!-- Strings related to Notification preference -->
     <string name="pref_last_notification">last_notification</string>
 
+    <!-- Strings related to empty Screens -->
+    <string name="empty_list">No weather information available</string>
+    <string name="internet_not_available">There is no connection to internet</string>
+
 </resources>
