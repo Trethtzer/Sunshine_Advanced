@@ -112,5 +112,6 @@
     <!-- Strings related to empty Screens -->
     <string name="empty_list">No weather information available</string>
     <string name="internet_not_available">There is no connection to internet</string>
+    <string name="handle_error_cases">handleErrorCases</string>
 
 </resources>

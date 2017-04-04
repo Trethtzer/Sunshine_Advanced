@@ -2,32 +2,58 @@
 <items version="2" >
 
     <item
-        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
+        is-multidex="true"
+        jar="C:\Users\joker\.android\build-cache\ce72bcdc60955dab2a5c7f99f6003ed3c3ab8673\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
         sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
-        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\classes-cab7385fa23df14350cd36d768a16f9b24468a29.jar" />
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_540a4682053e27250ec81aeea68e7e43bbf520a4\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Trethtzer\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
-        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-a93b4043e9f7c09d6627eb4427c168cbd6b4bd71.jar" />
+        is-multidex="true"
+        jar="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_854d5da8762e863a8ae3afbf6540e2397287cc10\classes.dex" />
     </item>
     <item
-        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
+        is-multidex="true"
+        jar="C:\Users\joker\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.0_406c318056a080e05b47bac1a5dce228f812e1fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\joker\.android\build-cache\9ddec0e699100c2bd0d360b2424dfd8fde887596\output\jars\libs\internal_impl-21.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
         sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
-        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-3fc650b56a803005dc90c5f2ef205d5ed476878c.jar" />
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-21.0.2_9e1a21441a1557b2bbe7f73b3e85143500ad9c1e\classes.dex" />
     </item>
     <item
-        jar="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
+        is-multidex="true"
+        jar="C:\Users\joker\.android\build-cache\9ddec0e699100c2bd0d360b2424dfd8fde887596\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
         sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
-        <dex dex="D:\computer\Android nanodegree\Sunshine_Advanced\app\build\intermediates\pre-dexed\debug\classes-5f0846810535d91fc495fe0d8dc7013a210b0d96.jar" />
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_61caf01a8d0b918df8adc113733396099f22572e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d55e902fd3f203af8ab0dd7eff0debcdac1bf0b7">
+        <dex dex="C:\Users\joker\Desktop\C\Android udacity\Sunshine_Advanced\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_af7ea201244ad3828dd1d56412324c683fc87de4\classes.dex" />
     </item>
 
 </items>
