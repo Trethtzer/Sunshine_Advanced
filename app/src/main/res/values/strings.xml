@@ -114,7 +114,12 @@
     <string name="empty_forecast_list_no_network">There is no connection to internet</string>
     <string name="empty_forecast_list_server_down">The server is not returning data.</string>
     <string name="empty_forecast_list_server_error">The server is not returning valid data. Please check for an updated version of Sunshine.</string>
+    <string name="invalid_location">The location is not valid.</string>
 
     <string name="handle_error_cases">handleErrorCases</string>
+
+    <!-- Strings used when displaying the state of the Location in settings -->
+    <string name="pref_location_error_description">Invalid Location (<xliff:g id="location_setting">%1$s</xliff:g>)"</string>
+    <string name="pref_location_unknown_description">Validating Location... (<xliff:g id="location_setting">%1$s</xliff:g>)"</string>
 
 </resources>
