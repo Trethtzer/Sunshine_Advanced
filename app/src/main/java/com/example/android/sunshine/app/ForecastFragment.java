@@ -16,9 +16,12 @@
 package com.example.android.sunshine.app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -40,7 +43,8 @@ import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
 /**
  * Encapsulates fetching the forecast and displaying it as a {@link ListView} layout.
  */
-public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
+public class ForecastFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>,
+        SharedPreferences.OnSharedPreferenceChangeListener{
     public static final String LOG_TAG = ForecastFragment.class.getSimpleName();
     private ForecastAdapter mForecastAdapter;
 
@@ -84,6 +88,11 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
     static final int COL_COORD_LAT = 7;
     static final int COL_COORD_LONG = 8;
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        checkMessage();
+    }
+
     /**
      * A callback interface that all activities containing this fragment must
      * implement. This mechanism allows activities to be notified of item
@@ -104,6 +113,19 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         super.onCreate(savedInstanceState);
         // Add this line in order for this fragment to handle menu events.
         setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onResume(){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sp.registerOnSharedPreferenceChangeListener(this);
+        super.onResume();
+    }
+    @Override
+    public void onPause(){
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        sp.unregisterOnSharedPreferenceChangeListener(this);
+        super.onPause();
     }
 
     @Override
@@ -161,7 +183,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
             }
         });
         emptyList = (TextView) rootView.findViewById(R.id.empty_list_text);
-        emptyList.setText(R.string.empty_list);
+        emptyList.setText(R.string.empty_forecast_list);
         mListView.setEmptyView(emptyList);
 
         // If there's instance state, mine it for useful information.
@@ -256,7 +278,7 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         if(!data.moveToFirst()){
             // Comprobar si tenemos conexión a internet.
             if(!Utility.checkInternet(getActivity())){
-                emptyList.setText(R.string.internet_not_available);
+                emptyList.setText(R.string.empty_forecast_list_no_network);
             }
         }
         if (mPosition != ListView.INVALID_POSITION) {
@@ -275,6 +297,28 @@ public class ForecastFragment extends Fragment implements LoaderManager.LoaderCa
         mUseTodayLayout = useTodayLayout;
         if (mForecastAdapter != null) {
             mForecastAdapter.setUseTodayLayout(mUseTodayLayout);
+        }
+    }
+
+    public void checkMessage(){
+        if(mListView.getCount() == 0){
+            if(emptyList != null){
+                String m = getString(R.string.handle_error_cases);
+                SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                switch (sp.getInt(getString(R.string.handle_error_cases),0)){
+                    case SunshineSyncAdapter.LOCATION_STATUS_SERVER_DOWN:
+                        m = getString(R.string.empty_forecast_list_server_down);
+                        break;
+                    case SunshineSyncAdapter.LOCATION_STATUS_SERVER_INVALID:
+                        m = getString(R.string.empty_forecast_list_server_error);
+                        break;
+                    default:
+                        if(!Utility.checkInternet(getActivity())){
+                            m = getString(R.string.empty_forecast_list_no_network);
+                        }
+                }
+                emptyList.setText(m);
+            }
         }
     }
 }
